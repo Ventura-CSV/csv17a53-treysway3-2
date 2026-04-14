@@ -25,7 +25,11 @@ def find_non_surjective_element(mapping: dict, target: set):
 
 def my_floor(x: float) -> int:
     """Return floor(x) without math.floor."""
-    return int(x)
+    truncated = int(x)
+
+    if x >= 0 or x == truncated:
+        return truncated
+    return truncated - 1
 
 
 def my_ceil(x: float) -> int:
